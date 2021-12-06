@@ -1,109 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
+<testng-results ignored="3" total="11" passed="6" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-03T06:24:12Z" name="Default suite" finished-at="2021-12-03T06:24:58Z" duration-ms="45879">
+  <suite started-at="2021-12-06T13:57:46Z" name="Suite" finished-at="2021-12-06T14:01:17Z" duration-ms="211427">
     <groups>
+      <group name="smoke">
+        <method signature="Flipkart.homePage(java.lang.String)[pri:-1, instance:com.flipkart.test.Flipkart@41ab013]" name="homePage" class="com.flipkart.test.Flipkart"/>
+        <method signature="Flipkart.scrollDown()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" name="scrollDown" class="com.flipkart.test.Flipkart"/>
+        <method signature="Spotify.homePage()[pri:-1, instance:com.flipkart.test.Spotify@1ab06251]" name="homePage" class="com.flipkart.test.Spotify"/>
+      </group> <!-- smoke -->
+      <group name="UAT">
+        <method signature="Flipkart.screenshot()[pri:3, instance:com.flipkart.test.Flipkart@41ab013]" name="screenshot" class="com.flipkart.test.Flipkart"/>
+      </group> <!-- UAT -->
     </groups>
-    <test started-at="2021-12-03T06:24:12Z" name="Default test" finished-at="2021-12-03T06:24:58Z" duration-ms="45879">
-      <class name="com.flipkart.test.Flipkart">
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:12Z" name="browserLaunch" finished-at="2021-12-03T11:54:31Z" duration-ms="18878" status="PASS">
+    <test started-at="2021-12-06T13:57:46Z" name="Test" finished-at="2021-12-06T14:01:17Z" duration-ms="211427">
+      <class name="com.flipkart.test.Spotify">
+        <test-method is-config="true" signature="launch()[pri:0, instance:com.flipkart.test.Spotify@1ab06251]" started-at="2021-12-06T19:27:46Z" name="launch" finished-at="2021-12-06T19:28:53Z" duration-ms="67262" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserLaunch -->
-        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:31Z" name="startTime" finished-at="2021-12-03T11:54:31Z" duration-ms="1" status="PASS">
+        </test-method> <!-- launch -->
+        <test-method is-config="true" signature="startWidth()[pri:0, instance:com.flipkart.test.Spotify@1ab06251]" started-at="2021-12-06T19:28:53Z" name="startWidth" finished-at="2021-12-06T19:28:53Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method signature="homePage()[pri:-5, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:31Z" name="homePage" finished-at="2021-12-03T11:54:40Z" duration-ms="8675" status="PASS">
+        </test-method> <!-- startWidth -->
+        <test-method signature="homePage()[pri:-1, instance:com.flipkart.test.Spotify@1ab06251]" started-at="2021-12-06T19:28:53Z" name="homePage" finished-at="2021-12-06T19:29:04Z" duration-ms="10864" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homePage -->
-        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:40Z" name="endTime" finished-at="2021-12-03T11:54:40Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="endsWidth()[pri:0, instance:com.flipkart.test.Spotify@1ab06251]" started-at="2021-12-06T19:29:04Z" name="endsWidth" finished-at="2021-12-06T19:29:04Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:40Z" name="startTime" finished-at="2021-12-03T11:54:40Z" duration-ms="1" status="PASS">
+        </test-method> <!-- endsWidth -->
+        <test-method is-config="true" signature="Snapshot()[pri:0, instance:com.flipkart.test.Spotify@1ab06251]" started-at="2021-12-06T19:29:04Z" name="Snapshot" finished-at="2021-12-06T19:29:07Z" duration-ms="3381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Snapshot -->
+      </class> <!-- com.flipkart.test.Spotify -->
+      <class name="com.flipkart.test.Flipkart">
+        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:29:07Z" name="browserLaunch" finished-at="2021-12-06T19:29:43Z" duration-ms="35015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserLaunch -->
+        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:29:43Z" name="startTime" finished-at="2021-12-06T19:29:43Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method signature="scrollDown()[pri:-4, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:40Z" name="scrollDown" finished-at="2021-12-03T11:54:44Z" duration-ms="4167" status="PASS">
+        <test-method signature="homePage(java.lang.String)[pri:-1, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:29:43Z" name="homePage" data-provider="Mobile Name" finished-at="2021-12-06T19:29:47Z" duration-ms="4348" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Laptop]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePage -->
+        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:29:47Z" name="endTime" finished-at="2021-12-06T19:29:47Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:29:47Z" name="startTime" finished-at="2021-12-06T19:29:47Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method signature="scrollDown()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:29:47Z" name="scrollDown" finished-at="2021-12-06T19:30:31Z" duration-ms="43991" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(text(),'RedmiBook 15 e-Le')]"}  (Session info: chrome=96.0.4664.45)For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'System info: host: 'LENOVO', ip: '192.168.43.198', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ELCOT\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65250}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}Session ID: 8aeb5516599aff3209512260b6385fe7*** Element info: {Using=xpath, value=//div[contains(text(),'RedmiBook 15 e-Le')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(text(),'RedmiBook 15 e-Le')]"}  (Session info: chrome=96.0.4664.45)For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'System info: host: 'LENOVO', ip: '192.168.43.198', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ELCOT\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65250}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}Session ID: 8aeb5516599aff3209512260b6385fe7*** Element info: {Using=xpath, value=//div[contains(text(),'RedmiBook 15 e-Le')]}at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)at org.openqa.selenium.By$ByXPath.findElement(By.java:353)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)at com.flipkart.test.Flipkart.scrollDown(Flipkart.java:91)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:567)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- scrollDown -->
-        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:44Z" name="endTime" finished-at="2021-12-03T11:54:44Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:30:31Z" name="endTime" finished-at="2021-12-06T19:30:31Z" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:44Z" name="startTime" finished-at="2021-12-03T11:54:44Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:30:31Z" name="startTime" finished-at="2021-12-06T19:30:31Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method signature="windowHandle()[pri:-3, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:44Z" name="windowHandle" finished-at="2021-12-03T11:54:44Z" duration-ms="213" status="PASS">
+        <test-method signature="windowHandle()[pri:1, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:30:31Z" name="windowHandle" finished-at="2021-12-06T19:30:31Z" duration-ms="120" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- windowHandle -->
-        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:44Z" name="endTime" finished-at="2021-12-03T11:54:44Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:30:31Z" name="endTime" finished-at="2021-12-06T19:30:31Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:44Z" name="startTime" finished-at="2021-12-03T11:54:44Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:30:31Z" name="startTime" finished-at="2021-12-06T19:30:31Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method signature="addToCart()[pri:-2, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:44Z" name="addToCart" finished-at="2021-12-03T11:54:53Z" duration-ms="8648" status="PASS">
+        <test-method signature="addToCart()[pri:2, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:30:31Z" name="addToCart" finished-at="2021-12-06T19:31:14Z" duration-ms="43064" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='ADD TO CART']"}  (Session info: chrome=96.0.4664.45)For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'System info: host: 'LENOVO', ip: '192.168.43.198', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ELCOT\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65250}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}Session ID: 8aeb5516599aff3209512260b6385fe7*** Element info: {Using=xpath, value=//button[text()='ADD TO CART']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='ADD TO CART']"}  (Session info: chrome=96.0.4664.45)For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'System info: host: 'LENOVO', ip: '192.168.43.198', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ELCOT\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65250}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}Session ID: 8aeb5516599aff3209512260b6385fe7*** Element info: {Using=xpath, value=//button[text()='ADD TO CART']}at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)at org.openqa.selenium.By$ByXPath.findElement(By.java:353)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)at com.flipkart.test.Flipkart.addToCart(Flipkart.java:115)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:567)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCart -->
-        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:53Z" name="endTime" finished-at="2021-12-03T11:54:53Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:31:14Z" name="endTime" finished-at="2021-12-06T19:31:14Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:53Z" name="startTime" finished-at="2021-12-03T11:54:53Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:31:14Z" name="startTime" finished-at="2021-12-06T19:31:14Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method signature="assertionE()[pri:-1, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:53Z" name="assertionE" finished-at="2021-12-03T11:54:53Z" duration-ms="331" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]at org.testng.Assert.fail(Assert.java:96)at org.testng.Assert.failNotEquals(Assert.java:776)at org.testng.Assert.assertTrue(Assert.java:44)at org.testng.Assert.assertTrue(Assert.java:54)at com.flipkart.test.Flipkart.assertionE(Flipkart.java:129)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:567)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="screenshot()[pri:3, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:31:14Z" name="screenshot" finished-at="2021-12-06T19:31:15Z" duration-ms="987" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- assertionE -->
-        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:53Z" name="endTime" finished-at="2021-12-03T11:54:53Z" duration-ms="1" status="PASS">
+        </test-method> <!-- screenshot -->
+        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:31:15Z" name="endTime" finished-at="2021-12-06T19:31:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:53Z" name="startTime" finished-at="2021-12-03T11:54:53Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:31:15Z" name="startTime" finished-at="2021-12-06T19:31:15Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method signature="assertionF()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:53Z" name="assertionF" finished-at="2021-12-03T11:54:56Z" duration-ms="3239" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "String.equals(Object)" because "com.flipkart.test.Flipkart.text2" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "com.flipkart.test.Flipkart.text2" is nullat com.flipkart.test.Flipkart.assertionF(Flipkart.java:137)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:567)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="screenshot()[pri:3, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:31:15Z" name="screenshot" finished-at="2021-12-06T19:31:15Z" duration-ms="364" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- assertionF -->
-        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:56Z" name="endTime" finished-at="2021-12-03T11:54:56Z" duration-ms="3" status="PASS">
+        </test-method> <!-- screenshot -->
+        <test-method is-config="true" signature="startTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:31:16Z" name="startTime" finished-at="2021-12-06T19:31:16Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:31:16Z" name="endTime" finished-at="2021-12-06T19:31:16Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:com.flipkart.test.Flipkart@3148f668]" started-at="2021-12-03T11:54:56Z" name="quit" finished-at="2021-12-03T11:54:58Z" duration-ms="1538" status="PASS">
+        <test-method signature="screenshot()[pri:3, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:31:16Z" name="screenshot" finished-at="2021-12-06T19:31:16Z" duration-ms="326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshot -->
+        <test-method is-config="true" signature="endTime()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:31:16Z" name="endTime" finished-at="2021-12-06T19:31:16Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:com.flipkart.test.Flipkart@41ab013]" started-at="2021-12-06T19:31:16Z" name="quit" finished-at="2021-12-06T19:31:17Z" duration-ms="1413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- com.flipkart.test.Flipkart -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

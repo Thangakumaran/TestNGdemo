@@ -21,16 +21,22 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Flipkart {
+	@DataProvider(name="Mobile Name")
+	public Object[][] getData() {
+		return new Object[][] {{"Laptop"}};
+
+	}
 
 	static WebDriver driver;
 	static long start;
 
-	@BeforeClass
+	@BeforeClass(groups = "common")
 	public static void browserLaunch() {
 		System.out.println("BeforeClass");
 		WebDriverManager.chromedriver().setup();
@@ -40,28 +46,20 @@ public class Flipkart {
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 	}
 
-	@AfterClass
+	@AfterClass(groups = "common")
 	public static void quit() throws IOException {
 		System.out.println("AfterClass");
-		DateTimeFormatter ofPattern = DateTimeFormatter.ofPattern("Hmm");
-		LocalDateTime now = LocalDateTime.now();
-		String format = ofPattern.format(now);
-		System.out.println(format);
-
-		TakesScreenshot t = (TakesScreenshot) driver;
-		File screenshotAs = t.getScreenshotAs(OutputType.FILE);
-		File f = new File("C:\\Users\\ELCOT\\eclipse-workspaceNew\\MAVEN\\TestNG\\target\\Snapshot" + format + ".png");
-		FileUtils.copyFile(screenshotAs, f);
+		driver.quit();
 	}
 
-	@BeforeMethod
+	@BeforeMethod(groups = "common")
 	public void startTime() {
 		System.out.println("Before");
 		start = System.currentTimeMillis();
 
 	}
 
-	@AfterMethod
+	@AfterMethod(groups = "common")
 	public void endTime() {
 		System.out.println("After");
 		long end = System.currentTimeMillis();
@@ -71,8 +69,8 @@ public class Flipkart {
 		System.out.println("Time taken " + s);
 	}
 
-	@Test(priority = -5)
-	public void homePage() throws InterruptedException {
+	@Test(priority = -1,groups = "smoke",dataProvider = "Mobile Name")
+	public void homePage(String name) throws InterruptedException {
 		try {
 			WebElement a = driver.findElement(By.xpath("//button[text()='✕']"));
 			a.isDisplayed();
@@ -82,12 +80,12 @@ public class Flipkart {
 		}
 		Thread.sleep(2000);
 		WebElement b = driver.findElement(By.xpath("//input[@type='text']"));
-		b.sendKeys("Laptop", Keys.ENTER);
+		b.sendKeys(name, Keys.ENTER);
 	}
 
 	static String text;
 
-	@Test(priority = -4)
+	@Test(priority = 0,groups = "smoke")
 	public void scrollDown() throws InterruptedException {
 		Thread.sleep(3000);
 		WebElement b = driver.findElement(By.xpath("//div[contains(text(),'RedmiBook 15 e-Le')]"));
@@ -98,7 +96,7 @@ public class Flipkart {
 		System.out.println(text);
 	}
 
-	@Test(priority = -3)
+	@Test(priority = 1)
 	public void windowHandle() throws InterruptedException {
 
 		String c = driver.getWindowHandle();
@@ -111,17 +109,29 @@ public class Flipkart {
 		}
 	}
 
-	@Test(priority = -2)
+	@Test(priority = 2)
 	public void addToCart() throws InterruptedException {
 		Thread.sleep(3000);
 		WebElement i = driver.findElement(By.xpath("//button[text()='ADD TO CART']"));
 		i.click();
 
 	}
+	@Test(priority = 3,invocationCount = 3,groups = "UAT")
+	public void screenshot() throws IOException {
+		DateTimeFormatter ofPattern = DateTimeFormatter.ofPattern("Hmm");
+		LocalDateTime now = LocalDateTime.now();
+		String format = ofPattern.format(now);
+		System.out.println(format);
+
+		TakesScreenshot t = (TakesScreenshot) driver;
+		File screenshotAs = t.getScreenshotAs(OutputType.FILE);
+		File f = new File("C:\\Users\\ELCOT\\eclipse-workspaceNew\\MAVEN\\TestNG\\target\\Snapshot" + format + ".png");
+		FileUtils.copyFile(screenshotAs, f);
+	}
 
 	static String text2;
 
-	@Test(priority = -1)
+	@Test(priority = 4,enabled = false)
 	public void assertionE() {
 		WebElement g = driver.findElement(By.xpath("//span[contains(text(),'RedmiBook 15 e-L')]"));
 		String text2 = g.getText();
@@ -129,7 +139,7 @@ public class Flipkart {
 		Assert.assertTrue(text.equals(g));
 	}
 
-	@Test(priority = 0)
+	@Test(priority = 5,enabled = false)
 	public void assertionF() {
 		WebElement l = driver.findElement(By.xpath("//a[contains(text(),'RedmiBook 15 e-Learning ')]"));
 		String text3 = l.getText();
