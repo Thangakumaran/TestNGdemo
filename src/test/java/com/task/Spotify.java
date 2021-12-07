@@ -1,4 +1,4 @@
-package com.flipkart.test;
+package com.task;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,10 +36,10 @@ public class Spotify {
  		String s = "https://www.irctc.co.in/nget/train-search";
  		driver.get(s);
  		driver.manage().window().maximize();
-         driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
+         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 	}
 	
-	@AfterClass(groups = "common")
+	@AfterClass(groups = "common" , enabled=false)
 	public static void Snapshot() throws IOException {
 		
 		System.out.println("AfterClass");
@@ -66,35 +66,35 @@ public class Spotify {
    }
    
    
-   @Test(priority = -1,groups = "smoke")
+   @Test(priority = -1,groups = "smoke",retryAnalyzer = Retry.class)
    public void homePage() throws InterruptedException  {
-	   Thread.sleep(3000);
+	  Thread.sleep(1000);
 	   WebElement Al = driver.findElement(By.xpath("//button[text()='OK']"));
 		Al.click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		WebElement list = driver.findElement(By.xpath("(//input[@role='searchbox'])[1]"));
 		list.click();
 		
 		List<WebElement> list2 = list.findElements(By.xpath("//ul[@role='listbox']"));
 		for (WebElement webE : list2) {
 			
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			String text = webE.getText();
 			System.out.println(text);
 			  if (text.contains("CHENNAI EGMORE")) {
-					Thread.sleep(2000);
+				//	Thread.sleep(2000);
 				webE.click();
 				System.out.println("clicked");
 					
 				}	
 		}
 	  }
-   @Test(priority = 0,groups = "Regression")
+   @Test(priority = 0,groups = "smoke",retryAnalyzer = Retry.class)
    public void loginPage() throws InterruptedException {
 	   Thread.sleep(3000);
 	 
 	
-	WebElement To = driver.findElement(By.xpath("(//input[@role='searchbox'])[2]"));
+	WebElement To = driver.findElement(By.xpath("(//input[@role='searchboxs'])[2]"));
 	To.click();
 	List<WebElement> To2 = To.findElements(By.xpath("//ul[@role='listbox']"));
 	for (WebElement webE2 : To2) {

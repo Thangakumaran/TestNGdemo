@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.task.Trans"/>
+  </listeners>
   <test name="Test(failed)">
-    <parameter name="password" value="thangakumar"/>
-    <parameter name="username" value="thangakumaran1996@gmail.com"/>
-    <groups>
-      <run>
-        <exclude name="Regression"/>
-      </run>
-    </groups>
     <classes>
-      <class name="com.flipkart.test.Flipkart">
+      <class name="com.task.Design">
         <methods>
-          <include name="startTime"/>
-          <include name="quit"/>
-          <include name="addToCart"/>
-          <include name="endTime"/>
-          <include name="scrollDown"/>
-          <include name="browserLaunch"/>
+          <include name="run"/>
         </methods>
-      </class> <!-- com.flipkart.test.Flipkart -->
+      </class> <!-- com.task.Design -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

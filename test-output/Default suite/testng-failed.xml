@@ -3,18 +3,11 @@
 <suite thread-count="-1" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.flipkart.test.Spotify">
+      <class name="com.task.Parallel">
         <methods>
-          <include name="testB"/>
-          <include name="startWidth"/>
-          <include name="Snapshot"/>
-          <include name="testD"/>
-          <include name="endsWidth"/>
-          <include name="testC"/>
-          <include name="launch"/>
-          <include name="testA"/>
+          <include name="chrome1"/>
         </methods>
-      </class> <!-- com.flipkart.test.Spotify -->
+      </class> <!-- com.task.Parallel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

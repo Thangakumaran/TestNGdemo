@@ -1,4 +1,4 @@
-package com.flipkart.test;
+package com.task;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +22,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+import org.testng.internal.reflect.Parameter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -49,7 +53,7 @@ public class Flipkart {
 	@AfterClass(groups = "common")
 	public static void quit() throws IOException {
 		System.out.println("AfterClass");
-		driver.quit();
+		//driver.quit();
 	}
 
 	@BeforeMethod(groups = "common")
@@ -68,10 +72,17 @@ public class Flipkart {
 
 		System.out.println("Time taken " + s);
 	}
-
+  
 	@Test(priority = -1,groups = "smoke",dataProvider = "Mobile Name")
+	// @Parameters({"username","password"})
 	public void homePage(String name) throws InterruptedException {
-		try {
+	  // WebElement g = driver.findElement(By.xpath("(//input[@type='text'])[2]"));
+		//g.sendKeys(pass);
+		/////WebElement h = driver.findElement(By.xpath("//input[@type='password']"));
+		//h.sendKeys(user);
+		///Thread.sleep(2000);
+	   try {
+			
 			WebElement a = driver.findElement(By.xpath("//button[text()='✕']"));
 			a.isDisplayed();
 			a.click();
@@ -88,7 +99,7 @@ public class Flipkart {
 	@Test(priority = 0,groups = "smoke")
 	public void scrollDown() throws InterruptedException {
 		Thread.sleep(3000);
-		WebElement b = driver.findElement(By.xpath("//div[contains(text(),'RedmiBook 15 e-Le')]"));
+		WebElement b = driver.findElement(By.xpath("//div[contains(text(),'ASUS Core i3 10th Gen - (4 GB ')]"));
 		JavascriptExecutor j = (JavascriptExecutor) driver;
 		j.executeScript("arguments[0].scrollIntoView(true)", b);
 		j.executeScript("arguments[0].click()", b);
@@ -116,7 +127,7 @@ public class Flipkart {
 		i.click();
 
 	}
-	@Test(priority = 3,invocationCount = 3,groups = "UAT")
+	@Test(priority = 3,invocationCount = 2,groups = "UAT")
 	public void screenshot() throws IOException {
 		DateTimeFormatter ofPattern = DateTimeFormatter.ofPattern("Hmm");
 		LocalDateTime now = LocalDateTime.now();
@@ -131,11 +142,14 @@ public class Flipkart {
 
 	static String text2;
 
-	@Test(priority = 4,enabled = false)
+	@Test(priority = 4,enabled = true)
 	public void assertionE() {
 		WebElement g = driver.findElement(By.xpath("//span[contains(text(),'RedmiBook 15 e-L')]"));
 		String text2 = g.getText();
 		System.out.println(text2);
+		SoftAssert s = new SoftAssert();
+		s.assertTrue(text2.equals("Mi Laptop"));
+		//s.assertEquals(true, false);
 		Assert.assertTrue(text.equals(g));
 	}
 
